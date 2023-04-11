@@ -14,23 +14,23 @@ public class JPAInheritanceDemo {
 
 		service = new PersonServiceImpl();
 		
-		  p.setId(2); p.setName("Prajakta"); p.setCity("Pune"); service.addPerson(p);
+		  p.setId(10); p.setName("Aniket"); p.setCity("Nashik"); service.addPerson(p);
 		 
 
 		System.out.println("-------------------------");
 
-		Person pp = service.getPerson(2);
+		Person pp = service.getPerson(10);
 		System.out.println(pp);
 		
 		StudentService sservice;
 		sservice=new StudentServiceImpl();
 		
 		Student s=new Student();
-		s.setId(101);
-		s.setCity("Nashik");
-		s.setName("Amol");
-		s.setCourse("BE");
-		s.setPer(78);
+		s.setId(103);
+		s.setCity("Pune");
+		s.setName("Abhijit");
+		s.setCourse("MCA");
+		s.setPer(82);
 
 		sservice.addStudent(s);
 	}

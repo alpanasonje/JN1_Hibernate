@@ -1,8 +1,10 @@
 package com.tnsif.entities;
 
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
 @Entity
+//@DiscriminatorValue("StudentMember")
 public class Student extends Person{
 	private String course;
 	private float per;

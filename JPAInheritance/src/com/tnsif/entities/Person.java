@@ -1,10 +1,28 @@
 package com.tnsif.entities;
 
 import javax.persistence.Column;
+import javax.persistence.DiscriminatorColumn;
+import javax.persistence.DiscriminatorType;
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 
 @Entity
+/*
+ * @Inheritance(strategy=InheritanceType.SINGLE_TABLE)
+ * 
+ * @DiscriminatorColumn(name="ptype", discriminatorType =
+ * DiscriminatorType.STRING, length = 20)
+ * 
+ * @DiscriminatorValue("PersonMember")
+ */
+
+//@Inheritance(strategy=InheritanceType.TABLE_PER_CLASS)
+
+
+@Inheritance(strategy = InheritanceType.JOINED)
 public class Person {
 	@Id
 	@Column(name = "memberId")
